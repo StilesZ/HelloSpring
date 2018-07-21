@@ -1,4 +1,4 @@
-package com.outowirde;
+package com.autowirde;
 
 import org.springframework.stereotype.Component;
 

@@ -1,4 +1,4 @@
-package com.outowirde;
+package com.autowirde;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
