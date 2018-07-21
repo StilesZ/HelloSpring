@@ -1,9 +1,9 @@
-package com.autowride;
+package com.qualifier;
 
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
-@Order(1)
+@Order(value = 2)
 @Component
-public class BeanImpls implements BeanInterface {
+public class BeanImpl implements BeanInterface {
 }

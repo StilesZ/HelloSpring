@@ -1,6 +1,7 @@
-package com.autowride;
+package com.qualifier;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -16,6 +17,10 @@ public class BeanInvoker {
     @Autowired
     private Map<String,BeanInterface> map;
 
+    @Autowired
+    @Qualifier("beanImpl")
+    private BeanInterface beanInterface;
+
     public void say(){
         if(null!=list){
             for (BeanInterface bean : list)
@@ -29,6 +34,10 @@ public class BeanInvoker {
                 System.out.println(entry.getKey()+":"+entry.getValue().getClass().getName());
         }else {
             System.out.println("Map<String,BeanInterface> null");
+        }
+        System.out.println();
+        if(beanInterface!=null){
+            System.out.println(beanInterface.getClass().getName());
         }
     }
 }

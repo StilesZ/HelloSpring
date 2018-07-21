@@ -6,7 +6,7 @@
 
     <!--<context:annotation-config />-->
 
-    <context:component-scan base-package="com" >
+    <context:component-scan base-package="com.qualifier" >
 
     </context:component-scan>
 
