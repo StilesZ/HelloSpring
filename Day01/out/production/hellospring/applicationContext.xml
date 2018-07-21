@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="helloWorld" class="hello">
+        <property name="name" value="Spring"></property>
+        <property name="name2" value="Spring2"></property>
+    </bean>
+    <bean id="beanTeamplate" abstract="true">
+        <property name="name" value="iSpring"></property>
+        <!--<property name="name2" value="iSpring2"></property>-->
+        <property name="name3" value="Spring4"></property>
+    </bean>
+    <bean id="helloIndia" class="helloIndia" parent="beanTeamplate">
+        <property name="name" value="iSpring"></property>
+        <property name="name3" value="Spring4"></property>
+    </bean>
+    <!--<bean class="initHello" />-->
+</beans>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+   <!--自动装配-->
+    <bean id="textEdit" class="TextEdit" autowire="constructor">
+
+        <!--构造注入-->
+        <constructor-arg value="john"/>
+
+        <!--<constructor-arg ref="spellChecker" />-->
+        <!--<constructor-arg index="1" value="2" />-->
+
+        <!--设值注入-->
+        <!--<property name="spellChecker" ref="spellChecker"/>-->
+        <!--<property name="name" value="john"/>-->
+
+
+
+        <!--bean内部注入-->
+        <!--<property name="spellChecker" >-->
+            <!--<bean id="spellChecker" class="SpellChecker" />-->
+        <!--</property>-->
+    </bean>
+
+
+    <!--集合注入-->
+    <bean id="JavaCollection" class="JavaCollection">
+        <property name="addressList">
+            <list>
+                <!--<ref bean="address1"/>-->
+                <value>INDIA</value>
+                <value>USA</value>
+                <value>INDIA</value>
+                <value>USA</value>
+            </list>
+        </property>
+        <property name="addressSet">
+            <set>
+                <value>INDIA</value>
+                <value>USA</value>
+                <value>INDIA</value>
+                <value>USA</value>
+            </set>
+        </property>
+        <property name="addressMap">
+            <map>
+                <entry key="1" value="India"/>
+                <entry key="2" value="USA"/>
+                <entry key="3" value="India"/>
+                <entry key="4" value="USA"/>
+            </map>
+        </property>
+        <property name="addressPro">
+            <props>
+                <prop key="one">INDIA</prop>
+                <prop key="two">USA</prop>
+                <prop key="three">INDIA</prop>
+                <prop key="four">USA</prop>
+            </props>
+        </property>
+    </bean>
+
+
+    <bean id="spellChecker" class="SpellChecker"></bean>
+</beans>
