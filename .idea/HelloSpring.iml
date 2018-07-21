@@ -6,6 +6,7 @@
         <fileset id="fileset" name="Spring Application Context" removed="false">
           <file>file://$MODULE_DIR$/Day01/out/production/hellospring/applicationContext.xml</file>
           <file>file://$MODULE_DIR$/Day01/src/applicationContext.xml</file>
+          <file>file://$MODULE_DIR$/Day08/src/beans.xml</file>
         </fileset>
       </configuration>
     </facet>

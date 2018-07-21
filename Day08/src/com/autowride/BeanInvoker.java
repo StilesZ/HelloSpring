@@ -10,7 +10,6 @@ import java.util.Map;
 @Component
 public class BeanInvoker {
 
-    @Autowired
     private List<BeanInterface> list;
 
     @Autowired
